@@ -96,9 +96,21 @@ public class CategoryController {
 		
 	}
 	@RequestMapping("studentModify")
-	public ModelAndView modifyStudentsById(HttpServletRequest request,HttpServletResponse response,Integer id,String name,String sex,Date age,String classes,String subject[]){
+	public ModelAndView modifyStudentsById(HttpServletRequest request,HttpServletResponse response,Integer id,String name,@RequestParam(value = "form-field-radio", required = false)String sex,@RequestParam(value = "form-field-checkbox", required = false)String subject){
 		ModelAndView mav=new ModelAndView();
-		List<Student> stu=categoryService.listAllStudent();
+		String classes=request.getParameter("classes");
+		String age1=request.getParameter("age");								 
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	    java.util.Date age=null;
+		try {
+			age =  sdf.parse(age1);
+		} catch (ParseException e) {
+			
+			e.printStackTrace();
+		}
+	    categoryService.studentModify(id,name,sex,age,classes,subject);
+	    System.out.println(id+name+sex+age+classes+subject);
+	    List<Student> stu=categoryService.listAllStudent();
 		mav.addObject("list", stu);
 		mav.setViewName("studentsManage");
 		return mav;
@@ -119,12 +131,11 @@ public class CategoryController {
 	 * @return
 	 */
 	@RequestMapping("addStudentFinal")
-	public ModelAndView addStudentFinal(HttpServletRequest request,HttpServletResponse response,Integer id,String name,@RequestParam(value = "sex", required = false) String sex/*,String sex,,String classes,String subject[]*/){
+	public ModelAndView addStudentFinal(HttpServletRequest request,HttpServletResponse response,Integer id,String name,@RequestParam(value = "form-field-checkbox", required = false) String subject,@RequestParam(value = "form-field-radio", required = false) String sex){
 		ModelAndView mav=new ModelAndView();
 		System.out.println("id :"+id+"name :"+name);
 		String classes=request.getParameter("classes");
 		System.out.println("classes :"+classes);
-		String sex1=request.getParameter("sex");
 		System.out.println("sex :"+sex);
 		String age1=request.getParameter("age");								 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -135,12 +146,8 @@ public class CategoryController {
 			
 			e.printStackTrace();
 		}
-		String subject= request.getParameter("subject");
-		System.out.println("subject :"+subject);
-		//一直为空
-		sex="女";
-		//一直为空
-		subject="语文";
+		
+		
 		Student student=new Student(id, name, age, sex, classes, subject);
 		categoryService.addStudent(student);
 		List<Student> stu=categoryService.listAllStudent();

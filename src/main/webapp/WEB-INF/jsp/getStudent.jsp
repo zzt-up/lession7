@@ -97,7 +97,7 @@
 					</div>
 					<c:forEach items="${list}" var="list">
 					<!-- 姓名 -->
-					<form action="/ssm/addStudentFinal" method="post">
+					<form action="/ssm/studentModify" method="post">
 					
 							<div class="form-group" style="background-color:white">
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 姓名 </label>
@@ -123,7 +123,7 @@
 								
 												<div class="radio">
 													<label>
-														<input name="form-field-radio" type="radio" class="ace" name="sex" value="男" <c:if test="${list.sex=='男' }"> checked="checked"</c:if>/>
+														<input name="form-field-radio" type="radio" class="ace"  value="男" <c:if test="${list.sex=='男' }"> checked="checked"</c:if>/>
 														<span class="lbl">男</span>
 													</label>
 												</div>
@@ -131,7 +131,7 @@
 
 												<div class="radio">
 													<label>
-														<input name="form-field-radio" type="radio" class="ace" name="sex" value="女"  <c:if test="${list.sex=='女' }"> checked="checked" </c:if>/>
+														<input name="form-field-radio" type="radio" class="ace" value="女"  <c:if test="${list.sex=='女' }"> checked="checked" </c:if>/>
 														<span class="lbl"> 女</span>
 													</label>
 												</div>
@@ -145,21 +145,21 @@
 
 												<div class="checkbox">
 													<label>
-														<input name="form-field-checkbox" type="checkbox" class="ace" name="subject" value="语文"  <c:if test="${list.subject=='语文' }"> checked </c:if>/>
+														<input name="form-field-checkbox" type="checkbox" class="ace" value="语文"  <c:if test="${list.subject=='语文' }"> checked </c:if>/>
 														<span class="lbl"> 语文</span>
 													</label>
 												</div>
 
 												<div class="checkbox">
 													<label>
-														<input name="form-field-checkbox" type="checkbox" class="ace" name="subject" value="数学"  <c:if test="${list.subject=='数学' }">checked </c:if>/>
+														<input name="form-field-checkbox" type="checkbox" class="ace" value="数学"  <c:if test="${list.subject=='数学' }">checked </c:if>/>
 														<span class="lbl"> 数学</span>
 													</label>
 												</div>
 
 												<div class="checkbox">
 													<label>
-														<input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox"  value="地理" name="subject"  <c:if test="${list.subject=='地理' }">checked </c:if>/>
+														<input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox"  value="地理"  <c:if test="${list.subject=='地理' }">checked </c:if>/>
 														<span class="lbl">地理</span>
 													</label>
 												</div>

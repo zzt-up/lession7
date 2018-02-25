@@ -123,7 +123,7 @@
 								
 												<div class="radio">
 													<label>
-														<input name="form-field-radio" type="radio" class="ace" name="sex" value="男" />
+														<input name="form-field-radio" type="radio" class="ace"  value="男" />
 														<span class="lbl">男</span>
 													</label>
 												</div>
@@ -131,7 +131,7 @@
 
 												<div class="radio">
 													<label>
-														<input name="form-field-radio" type="radio" class="ace" name="sex" value="女"  />
+														<input name="form-field-radio" type="radio" class="ace"  value="女"  />
 														<span class="lbl"> 女</span>
 													</label>
 												</div>
@@ -146,21 +146,21 @@
 
 												<div class="checkbox">
 													<label>
-														<input name="form-field-checkbox" type="checkbox" class="ace" name="subject" value="语文" />
+														<input name="form-field-checkbox" type="checkbox" class="ace"  value="语文" />
 														<span class="lbl"> 语文</span>
 													</label>
 												</div>
 
 												<div class="checkbox">
 													<label>
-														<input name="form-field-checkbox" type="checkbox" class="ace" name="subject" value="数学" />
+														<input name="form-field-checkbox" type="checkbox" class="ace" value="数学" />
 														<span class="lbl"> 数学</span>
 													</label>
 												</div>
 
 												<div class="checkbox">
 													<label>
-														<input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox" name="subject" value="地理"  />
+														<input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox" value="地理"  />
 														<span class="lbl">地理</span>
 													</label>
 												</div>

@@ -137,7 +137,7 @@
 											
 												
 
-							<c:forEach items="${list}" var="list">
+							<c:forEach items="${list}" var="list" varStatus="status">
 	<tr>
 													<td class="center">
 														<label class="pos-rel">
@@ -156,7 +156,7 @@
 													</td>
 
 													<td>
-														<a href="#">pro.com</a>
+														<a href="#">${status.index+1}</a>
 													</td>
 													<td>${list.id }</td>
 													<td class="hidden-480">${list.name}</td>

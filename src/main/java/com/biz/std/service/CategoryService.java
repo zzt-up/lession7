@@ -1,5 +1,6 @@
 package com.biz.std.service;
 
+import java.sql.Date;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -110,6 +111,21 @@ public class CategoryService {
 	public void addStudent(Student student) {
 		// TODO Auto-generated method stub
 		studentJpaRepository.save(student);
+		
+	}
+
+	/**
+	 * @param id
+	 * @param name
+	 * @param sex
+	 * @param age
+	 * @param classes
+	 * @param subject
+	 * @return
+	 */
+	
+	public void studentModify(Integer id, String name, String sex, java.util.Date age, String classes, String subject) {
+		/*studentRepository.modifyStudentsById(id,name,sex,age,classes,subject);*/
 		
 	}
 

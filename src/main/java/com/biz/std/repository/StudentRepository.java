@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import com.biz.std.model.Employee;
 import com.biz.std.model.Student;
 
+import java.util.Date;
 import java.util.List;
 
 //Repository是很重要的一个类，核心，定义一个接口，接口里面有一个方法，
@@ -52,6 +53,21 @@ public interface StudentRepository { //extends Repository<Employee这个是泛�
     @Query("update Student o set o.age = :age,o.sex=:sex,o.name=:name where o.id = :id")
     public void modifyStudentsById(@Param("id")Integer id,@Param("sex")String sex, @Param("name")String name,@Param("age")Integer age);
 
+	/**
+	 * @param id
+	 * @param name
+	 * @param sex
+	 * @param age
+	 * @param classes
+	 * @param subject
+	 */
+  /*  @Modifying
+    @Query("update Student o set o.age =?4,o.sex=?3,o.name=?2,o.classes=?5,o.subject=?6 where o.id =?1")
+	public void modifyStudentsById(Integer id,String name,String sex,Date age,String classes, String subject);*/
+  /*  @Modifying
+    @Query("update Student o set o.age =:age,o.sex=:sex,o.name=:name,o.classes=:classes,o.subject=:subject where o.id =:id")
+	public void modifyStudentsById(@Param("id")Integer id,@Param("name")String name,@Param("sex")String sex,@Param("age")Date age,@Param("classes")String classes, @Param("subject")String subject);
+*/
 	/**
 	 * @param id
 	 * @param name
