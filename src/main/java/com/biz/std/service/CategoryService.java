@@ -123,9 +123,10 @@ public class CategoryService {
 	 * @param subject
 	 * @return
 	 */
-	
+	@Transactional
 	public void studentModify(Integer id, String name, String sex, java.util.Date age, String classes, String subject) {
 		/*studentRepository.modifyStudentsById(id,name,sex,age,classes,subject);*/
+		studentRepository.modifyStudentsById(id,name);
 		
 	}
 

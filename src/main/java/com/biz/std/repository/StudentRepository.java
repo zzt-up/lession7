@@ -56,6 +56,14 @@ public interface StudentRepository { //extends Repository<Employee这个是泛�
 	/**
 	 * @param id
 	 * @param name
+	 */
+    @Modifying
+    @Query("update Student o set o.name=:name where o.id=:id")
+	public void modifyStudentsById(@Param("id")Integer id,@Param("name")String name);
+
+	/**
+	 * @param id
+	 * @param name
 	 * @param sex
 	 * @param age
 	 * @param classes

@@ -112,7 +112,7 @@
 										<label class="col-sm-3 control-label no-padding-right"  for="form-field-1"> 学号 </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="form-field-2" name="id" value="${list.id }" placeholder="出入学号" class="col-xs-10 col-sm-5" />
+											<input type="text" id="form-field-2" name="id" value="${list.id }" placeholder="出入学号" class="col-xs-10 col-sm-5" readonly="readonly" />
 										</div>
 									</div>	
 						<!-- 选择性别 -->
