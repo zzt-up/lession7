@@ -19,7 +19,7 @@ public class Student {
      */
 	 @GeneratedValue
 	 @Id
-    private int id;
+    private Integer id;
 
     /**
      * 姓名

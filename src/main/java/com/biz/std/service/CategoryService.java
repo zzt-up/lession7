@@ -122,11 +122,13 @@ public class CategoryService {
 	 * @param classes
 	 * @param subject
 	 * @return
+	 * save 有就修改，没有就创建
 	 */
 	@Transactional
 	public void studentModify(Integer id, String name, String sex, java.util.Date age, String classes, String subject) {
-		/*studentRepository.modifyStudentsById(id,name,sex,age,classes,subject);*/
-		studentRepository.modifyStudentsById(id,name);
+		
+		Student student =new Student(id, name, age, sex, classes, subject);
+		studentJpaRepository.save(student);
 		
 	}
 

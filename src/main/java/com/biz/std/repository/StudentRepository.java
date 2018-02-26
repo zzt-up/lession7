@@ -72,10 +72,10 @@ public interface StudentRepository { //extends Repository<Employee这个是泛�
   /*  @Modifying
     @Query("update Student o set o.age =?4,o.sex=?3,o.name=?2,o.classes=?5,o.subject=?6 where o.id =?1")
 	public void modifyStudentsById(Integer id,String name,String sex,Date age,String classes, String subject);*/
-  /*  @Modifying
-    @Query("update Student o set o.age =:age,o.sex=:sex,o.name=:name,o.classes=:classes,o.subject=:subject where o.id =:id")
-	public void modifyStudentsById(@Param("id")Integer id,@Param("name")String name,@Param("sex")String sex,@Param("age")Date age,@Param("classes")String classes, @Param("subject")String subject);
-*/
+//    @Modifying
+//    @Query("update Student o set o.age =:age,o.sex=:sex,o.name=:name,o.classes=:classes,o.subject=:subject where o.id =:id")
+//	public void modifyStudentsById(@Param("id")Integer id,@Param("name")String name,@Param("sex")String sex,@Param("age")Date age,@Param("classes")String classes, @Param("subject")String subject);
+
 	/**
 	 * @param id
 	 * @param name

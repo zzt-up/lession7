@@ -22,7 +22,7 @@ public class StudentAndSubject {
 	
 
 
-	
+	private Integer Score;
 	private Integer StudentId;
 	
 	private Integer SubjectId;
@@ -41,7 +41,7 @@ public class StudentAndSubject {
 		this.stuAndSubId = stuAndSubId;
 	}
 
-	private Integer Score;
+	
 	/**
 	 * @return the studentId
 	 */

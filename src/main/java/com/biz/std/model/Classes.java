@@ -21,31 +21,48 @@ import javax.persistence.Id;
 public class Classes {
 	 @GeneratedValue
 	 @Id
-	private Integer ClassId;
-	private String ClassName;
+	private Integer classId;
+	private String className;
 	/**
 	 * @return the classId
 	 */
 	public Integer getClassId() {
-		return ClassId;
+		return classId;
 	}
 	/**
 	 * @param classId the classId to set
 	 */
-	public void setClassId(Integer classId) {
-		ClassId = classId;
-	}
+	
 	/**
 	 * @return the className
 	 */
 	public String getClassName() {
-		return ClassName;
+		return className;
 	}
 	/**
 	 * @param className the className to set
 	 */
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Classes [classId=" + classId + ", className=" + className + "]";
+	}
+
+	/**
+	 * @param classId the classId to set
+	 */
+	public void setClassId(Integer classId) {
+		this.classId = classId;
+	}
+
+	/**
+	 * @param className the className to set
+	 */
 	public void setClassName(String className) {
-		ClassName = className;
+		this.className = className;
 	}
 	
 
